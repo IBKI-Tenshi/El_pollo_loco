@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pollo Loco</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./assets/icons/favicon_rooster_with_mustache.png">
+
+
+    <!-- Basisklassen -->
+    <script src="./js/classes/drawable.object.class.js"></script>
+    <script src="./js/classes/movable-object.class.js"></script>
+    <script src="./js/classes/chicken.class.js"></script>
+    <script src="./js/classes/chicken_small.class.js"></script>
+    <script src="./js/classes/cloud.class.js"></script>
+    <script src="./js/classes/coin.class.js"></script>
+    <script src="./js/classes/salsa-bottles.class.js"></script>
+    <script src="./js/classes/background-object.class.js"></script>
+
+    <script src="./js/classes/statusbar-health.class.js"></script>
+    <script src="./js/classes/statusbar-coin.class.js"></script>
+    <script src="./js/classes/statusbar-bottle.class.js"></script>
+    <script src="./js/classes/statusbar-endboss.class.js"></script>
+    <script src="./js/classes/world.class.js"></script>
+
+    <script src="./js/classes/keyboard.class.js"></script>
+    <script src="./js/classes/character.class.js"></script>
+
+
+    <script src="./js/classes/throwable-object.class.js"></script>
+
+    <script src="./js/classes/level.class.js"></script>
+
+
+
+    <script src="./js/classes/endboss.class.js"></script>
+
+    <!-- Spiellogik -->
+    <script src="./js/character.js"></script>
+    <script src="./js/levels/level1.js"></script>
+    <script src="./js/levels/level2.js"></script>
+
+    <!-- Startbildschirm und Spielinitialisierung -->
+    <script src="./js/classes/startscreen.class.js"></script>
+    <script src="./js/classes/gameoverscreen.class.js"></script>
+    <script src="./js/classes/gamecompletedscreen.class.js"></script>
+    <script src="./js/classes/youWonScreen.class.js"></script>
+    <script src="./js/game.js"></script>
+
+
+
+</head>
+
+<body onload="showStartScreen()">
+
+    <h1>El Pollo Loco</h1>
+
+    <div id="top-controls">
+        <button id="btnHome" class="btnControll" onclick="backToHome()">Home</button>
+        <button id="btnMute" class="btnControll" onclick="audioControll()"></button>
+    </div>
+
+    <div id="fullscreen">
+        <canvas id="canvas" width="1000" height="450">
+        </canvas>
+    </div>
+
+    <div id="how_to_play">
+        <span>Arrows Left/Right = Walk</span>
+        <span>Spacebar = Jump</span>
+        <span>D = Throw Bottle</span>
+    </div>
+
+
+    <div id="hud">
+        <div class="pannel">
+            <div class="pannel_wrapper">
+                <button id="btnLeft" class="controllBtn"><img src="./assets/icons/chevron-left-solid.svg" alt=""></button>
+                <button id="btnRight" class="controllBtn"><img src="./assets/icons/chevron-right-solid.svg" alt=""></button>
+            </div>
+            <div class="pannel_wrapper">
+                <button id="btnJump" class="controllBtn"><img src="./assets/icons/chevron-up-solid.svg" alt=""></button>
+                <button id="btnThrow" class="controllBtn"><img src="./assets/icons/wine-bottle-solid.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="TurnMobileScreen">
+        <span>Bitte den Bildschirm drehen um zum spielen</span>
+    </div>
+
+    <div id="spaceholder"></div>
+
+    <footer>
+        <a href="impressum.html">Impresum</a>
+    </footer>
+</body>
+
+</html>
